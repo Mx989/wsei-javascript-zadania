@@ -4,20 +4,25 @@ var Robot = function (name) {
 }
 
 Robot.prototype.sayHi = function (toWho) {
-    if (isFunctional === true) {
+    if (this.isFunctional === true) {   //add this.
         console.log("Robot " + this.name + " greets " + toWho);
     }
     else {
-        console.log("Robot " + this.name + "is broken");
+        console.log("Robot " + this.name + " is broken"); //add space
     }
 };
 
 Robot.prototype.changeName = function (newname) {
     console.log("Robot " + this.name + "changes name to " + newname);
-    name = newname;
+    this.name = newname;    //add this
 };
 
 Robot.prototype.fixIt = function () {
     this.isFunctional = true;
-    console.log("Robot " + this.name + "was fixed");
+    console.log("Robot " + this.name + " was fixed"); //add space
 };
+
+const robot = new Robot("Leszek");
+robot.sayHi("Andrzej");
+robot.changeName("Grzesiek");
+robot.fixIt();
