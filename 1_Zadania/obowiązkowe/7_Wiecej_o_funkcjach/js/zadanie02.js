@@ -12,3 +12,22 @@ callOtherFunction(function (a, b) {
     console.log("Wynik", a + b)
 })
 
+callOtherFunction(function (x, y){
+    console.log(x, "* ", y, " = ", x)
+})
+
+callOtherFunction(function (x,y){
+    if(x>0){
+        console.log("Pierwiastek z ",x,": ", Math.sqrt(x))
+    }
+    else{
+    console.log("Liczba nie może być mniejsza od 0");
+    }
+    if(y>0){
+        console.log("Pierwiastek z ",y,": ", Math.sqrt(y))
+    }
+    else{
+    console.log("Liczba nie może być mniejsza od 0");
+    }
+})
+

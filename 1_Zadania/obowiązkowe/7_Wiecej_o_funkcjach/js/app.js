@@ -5,28 +5,28 @@
  */
 
 
-//Twoj komentarz ...
+//deklaracja funkcji jeden
 function jeden() {
 
-    //Twoj komentarz ...
+    //deklaracja zmiennej zmienna1 - scope: funkcja jeden
     var zmienna1 = 1;
 
-    //Twoj komentarz ...
+    //deklaracja zagnieżdżonej funkcji dwa
     function dwa() {
 
-        //Twoj komentarz ...
+        //wypisanie do konsoli zmiennej zmienna1 - undefined jest spowodowany złym scope'm
         console.log(zmienna1);
 
-        //Twoj komentarz ...
+        //deklaracja zmiennej zmienna2 - scope: funkcja dwa
         var zmienna2 = 3;
     }
 
-    //Twoj komentarz ...
+    //wywołanie funkcji dwa
     dwa();
 
-    //Twoj komentarz ...
+    //wypisanie do konsoli zmiennej zmienna2 - undefined spowodowany złym scopem
     console.log(zmienna2)
 }
 
-//Twoj komentarz ...
+//wywołanie funkcji
 jeden()
