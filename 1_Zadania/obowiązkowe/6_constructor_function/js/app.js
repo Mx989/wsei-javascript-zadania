@@ -28,4 +28,3 @@ bruceBasket.addProduct("grzyby mun",50);
 bruceBasket.addProduct("tofu",20);
 bruceBasket.showBasket();
 
-//zadanie 

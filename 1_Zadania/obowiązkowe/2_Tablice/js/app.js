@@ -1,3 +1,5 @@
+//zadanie 0
+
 function distFromAvarage(tab){
 
     let sum = 0;

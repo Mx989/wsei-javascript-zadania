@@ -2,26 +2,28 @@ document.addEventListener("DOMContentLoaded", function () {
   var a = document.getElementById("a");
   var b = document.getElementById("b");
 
-  // Tutaj this wskazuje na obiekt document (Ponieważ kontext wywołania funkcji
-  // addEventListener to właśnie document)
+  //This wskazuje na obiekt document gdyz kontekst z jakiego ja wylowano to document
   console.log("obiekt document: ", this);
 
   a.addEventListener("click", function (event) {
-    // Tutaj this wskazuje na element DOM o id a
+    // This wskazuje na element DOM id a 
     console.log("a: ", this);
   });
 
   b.addEventListener("click", function (event) {
-    // Tutaj this wskazuje na element DOM o id b
+    //This wskazuje na element DOM o id b
     console.log("b: ", this);
 
 
     function innerFuncOne() {
-      // Tutaj this wskazuje na element Window, bo funkcja została
-      //wywołana bez żadnego kontekstu.
+      // this wskazuje na element Window.
       console.log("innerFuncOne: ", this);
     }
     innerFuncOne();
+    // uzylbym
+    // innerFuncOne.call(b)
+    // innerFuncOne.call(b)
+    // zalezy od kontekstu
 
   });
 
